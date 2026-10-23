@@ -140,7 +140,7 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(len(result["sha256"]), 64)
         self.assertEqual((self.target / "references" / "data.bin").read_bytes(), b"\x00payload\xff")
         self.assertTrue((self.target / "empty-directory").is_dir())
-        self.assertEqual(sorted(str(p.relative_to(self.target)) for p in self.target.rglob("*")),
+        self.assertEqual(sorted(p.relative_to(self.target).as_posix() for p in self.target.rglob("*")),
                          ["SKILL.md", "empty-directory", "references", "references/data.bin"])
         self.assertEqual(before, {str(p.relative_to(self.source)): p.read_bytes()
                                  for p in self.source.rglob("*") if p.is_file()})

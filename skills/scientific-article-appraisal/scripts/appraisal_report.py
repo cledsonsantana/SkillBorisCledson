@@ -261,8 +261,9 @@ def render(record, base=Path("."), *, output_base=None):
                           + "Evidências: " + references(data["evidence_ids"]))
             analysis = "Análise: " + data["analysis"]
             image = base64.b64encode((base / data["path"]).read_bytes()).decode("ascii")
-            link = quote(os.path.relpath((base / data["path"]).resolve(),
-                                         base if output_base is None else output_base), safe="/")
+            output_directory = (base if output_base is None else output_base).resolve()
+            relative_image = Path(os.path.relpath((base / data["path"]).resolve(), output_directory)).as_posix()
+            link = quote(relative_image, safe="/")
             md += [f'![{markdown_text(data["label"])}]({link})', "",
                    markdown_text(caption), "", markdown_text(provenance), "", markdown_text(analysis), ""]
             html.append('<figure><img src="data:image/png;base64,' + image + '" alt="'

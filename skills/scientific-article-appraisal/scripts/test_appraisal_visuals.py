@@ -175,10 +175,18 @@ class VisualTests(unittest.TestCase):
         self.assertIn("Análise: Utilidade analítica", md)
         self.assertIn("<footer>Revisão humana: pendente</footer>", html)
 
+    def test_render_normalizes_aliased_base_for_relative_image_links(self):
+        self.visual()
+        alias = self.root / "base-alias"
+        alias.symlink_to(self.root, target_is_directory=True)
+        md, _ = report.render(self.record, alias)
+        self.assertIn("](assets/synthetic.png)", md)
+        self.assertNotIn("%5C", md)
+
     def test_cli_uses_record_base_and_output_relative_markdown_links(self):
         row = self.visual()
         old = self.root / row["path"]
-        row["path"] = 'assets/synthetic [x] " &.png'
+        row["path"] = 'assets/synthetic [x] &.png'
         old.rename(self.root / row["path"])
         self.record_path.write_text(json.dumps(self.record), encoding="utf-8")
         prefix = self.root / "reports" / "illustrated"
@@ -192,7 +200,7 @@ class VisualTests(unittest.TestCase):
         encoded = re.search(r'data:image/png;base64,([^" ]+)', html).group(1)
         self.assertEqual(base64.b64decode(encoded), synthetic_png())
         md = prefix.with_suffix(".md").read_text(encoding="utf-8")
-        self.assertIn("](../assets/synthetic%20%5Bx%5D%20%22%20%26.png)", md)
+        self.assertIn("](../assets/synthetic%20%5Bx%5D%20%26.png)", md)
 
     def test_cli_cannot_overwrite_visual_through_output_symlink(self):
         row = self.visual()
