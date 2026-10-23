@@ -1,0 +1,6 @@
+EXEMPLO SINTÉTICO — NÃO É ARTIGO NEM EVIDÊNCIA CLÍNICA.
+Este texto didático original foi criado para exercitar validação e geração local de arquivos.
+Não há participantes, intervenção, comparação, desfechos, estimativas ou dados reais de segurança.
+Nenhum instrumento metodológico oficial foi aplicado a este material.
+O exercício não testa leitura de PDF, interpretação científica, paginação final ou descoberta nativa de uma skill.
+A finalidade é conferir o fluxo técnico de registro JSON, citações locais e saída Markdown/HTML.

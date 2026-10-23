@@ -1,0 +1,13 @@
+{
+  "purpose": "Preferências de exemplo para o agente; não são configuração automática do instalador/helper.",
+  "language": "pt-BR",
+  "audience": "profissionais clínicos",
+  "specialty": "definida pelo usuário",
+  "research_scope": null,
+  "eligibility_protocol": null,
+  "output_preference": "documento completo, com síntese inicial e interpretação junto aos dados",
+  "delivery_destination": null,
+  "human_reviewer": null,
+  "publication_authorized": false,
+  "notes": "O agente obtém decisões ausentes apenas quando necessárias; não inventa protocolo nem autoriza compartilhamento."
+}

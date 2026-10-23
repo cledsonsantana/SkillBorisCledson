@@ -1,0 +1,176 @@
+{
+  "article": {
+    "id": "SYNTHETIC-DEMO",
+    "title": "Exemplo sintético — não é evidência clínica",
+    "reference": "Material didático original do projeto SkillBorisCledson; sem artigo ou DOI real.",
+    "design": "Fixture técnica; não é pesquisa clínica"
+  },
+  "scope": {
+    "status": "undefined",
+    "protocol_version": "",
+    "reason": "Não é artigo científico e não existe protocolo de elegibilidade neste exercício.",
+    "criteria": []
+  },
+  "sources": [
+    {
+      "id": "S-DEMO",
+      "label": "Texto sintético original, não artigo",
+      "kind": "other",
+      "path": "source.txt"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-DEMO",
+      "source_id": "S-DEMO",
+      "locator": "Texto sintético integral, linhas do arquivo source.txt",
+      "quote": "EXEMPLO SINTÉTICO — NÃO É ARTIGO NEM EVIDÊNCIA CLÍNICA.\nEste texto didático original foi criado para exercitar validação e geração local de arquivos.\nNão há participantes, intervenção, comparação, desfechos, estimativas ou dados reais de segurança.\nNenhum instrumento metodológico oficial foi aplicado a este material.\nO exercício não testa leitura de PDF, interpretação científica, paginação final ou descoberta nativa de uma skill.\nA finalidade é conferir o fluxo técnico de registro JSON, citações locais e saída Markdown/HTML."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C-executive_summary",
+      "text": "Demonstração técnica sintética, não avaliação científica de artigo.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "extracted"
+    },
+    {
+      "id": "C-methods",
+      "text": "A fonte é um texto didático criado para exercitar o fluxo local; não contém estudo real.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "extracted"
+    },
+    {
+      "id": "C-intervention",
+      "text": "Não há intervenção nem comparação real neste exemplo.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "extracted"
+    },
+    {
+      "id": "C-results",
+      "text": "Não há participantes, desfechos ou estimativas reais a interpretar.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "extracted"
+    },
+    {
+      "id": "C-statistical_appraisal",
+      "text": "Nenhum resultado estatístico clínico pode ser avaliado a partir deste material.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "interpretation"
+    },
+    {
+      "id": "C-methodological_appraisal",
+      "text": "Nenhum instrumento oficial foi aplicado; o item DEMO somente exercita campos do contrato técnico.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "interpretation"
+    },
+    {
+      "id": "C-clinical_relevance",
+      "text": "Este exemplo não pode fundamentar decisão clínica ou recomendação de intervenção.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "interpretation"
+    },
+    {
+      "id": "C-safety",
+      "text": "Não há dados reais de segurança; isso não demonstra ausência de danos.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "extracted"
+    },
+    {
+      "id": "C-authors_conclusion",
+      "text": "O texto declara a finalidade de conferir registro JSON, citações locais e geração Markdown/HTML.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "extracted"
+    },
+    {
+      "id": "C-independent_conclusion",
+      "text": "A execução bem-sucedida demonstra somente o fluxo técnico, não correção científica.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "interpretation"
+    },
+    {
+      "id": "C-limitations",
+      "text": "Não exercita leitura de PDF, julgamento científico, paginação final ou descoberta nativa.",
+      "evidence_ids": [
+        "E-DEMO"
+      ],
+      "kind": "interpretation"
+    }
+  ],
+  "sections": {
+    "executive_summary": [
+      "C-executive_summary"
+    ],
+    "methods": [
+      "C-methods"
+    ],
+    "intervention": [
+      "C-intervention"
+    ],
+    "results": [
+      "C-results"
+    ],
+    "statistical_appraisal": [
+      "C-statistical_appraisal"
+    ],
+    "methodological_appraisal": [
+      "C-methodological_appraisal"
+    ],
+    "clinical_relevance": [
+      "C-clinical_relevance"
+    ],
+    "safety": [
+      "C-safety"
+    ],
+    "authors_conclusion": [
+      "C-authors_conclusion"
+    ],
+    "independent_conclusion": [
+      "C-independent_conclusion"
+    ],
+    "limitations": [
+      "C-limitations"
+    ]
+  },
+  "assessment": {
+    "instrument": "Demonstração técnica — nenhum instrumento oficial aplicado",
+    "version": "Fixture original do pacote público 0.6.0",
+    "status": "not_applicable",
+    "items": [
+      {
+        "id": "DEMO",
+        "domain": "Limite da demonstração",
+        "judgment": "Não aplicável a julgamento científico",
+        "reason": "A fonte é sintética e não contém pesquisa clínica. Este item não pertence a instrumento oficial.",
+        "evidence_ids": [
+          "E-DEMO"
+        ]
+      }
+    ]
+  },
+  "human_review": {
+    "status": "pending",
+    "reviewer": "",
+    "notes": "Demonstração sintética; o estado pendente exercita o campo e não representa análise real submetida à revisão."
+  }
+}

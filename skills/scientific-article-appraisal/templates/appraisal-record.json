@@ -1,0 +1,79 @@
+{
+  "article": {
+    "id": "PREENCHER: identificador estável do artigo no acervo",
+    "title": "PREENCHER: título literal do artigo identificado",
+    "reference": "PREENCHER: referência bibliográfica verificável do artigo",
+    "design": "PREENCHER: desenho identificado a partir dos métodos efetivamente lidos"
+  },
+  "scope": {
+    "status": "undefined",
+    "protocol_version": "",
+    "reason": "Escopo formal não definido; nenhuma decisão de elegibilidade foi emitida.",
+    "criteria": []
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "label": "PREENCHER: descrição do documento efetivamente lido e sua proveniência",
+      "kind": "other",
+      "path": "PREENCHER: caminho local de arquivo UTF-8 .txt, .text ou .md; relativo a este JSON"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "source_id": "S1",
+      "locator": "PREENCHER: página, seção, tabela, parágrafo ou linha identificável na fonte",
+      "quote": "PREENCHER: trecho literal presente no arquivo da fonte S1; não criar uma citação"
+    }
+  ],
+  "claims": [
+    {"id": "C-RESUMO", "text": "PREENCHER: síntese objetiva fundamentada no material lido", "evidence_ids": ["E1"], "kind": "interpretation"},
+    {"id": "C-METODOS", "text": "PREENCHER: métodos extraídos, com população, comparação e seguimento quando informados", "evidence_ids": ["E1"], "kind": "extracted"},
+    {"id": "C-INTERVENCAO", "text": "PREENCHER: intervenção ou exposição extraída; se indisponível, declarar Não informado e o limite da fonte lida", "evidence_ids": ["E1"], "kind": "extracted"},
+    {"id": "C-RESULTADOS", "text": "PREENCHER: resultados efetivamente informados, preservando unidades, denominadores e incerteza; nunca estimar lacunas", "evidence_ids": ["E1"], "kind": "extracted"},
+    {"id": "C-ESTATISTICA", "text": "PREENCHER: apreciação estatística explícita baseada nos métodos e resultados citados", "evidence_ids": ["E1"], "kind": "interpretation"},
+    {"id": "C-METODOLOGIA", "text": "PREENCHER: síntese dos julgamentos por domínio, sem somar instrumentos em um escore híbrido", "evidence_ids": ["E1"], "kind": "interpretation"},
+    {"id": "C-RELEVANCIA", "text": "PREENCHER: relevância clínica, aplicabilidade e extrapolações justificadas nas fontes", "evidence_ids": ["E1"], "kind": "interpretation"},
+    {"id": "C-SEGURANCA", "text": "PREENCHER: segurança conforme o material lido; Não informado não significa ausência de eventos", "evidence_ids": ["E1"], "kind": "extracted"},
+    {"id": "C-AUTORES", "text": "PREENCHER: conclusão dos autores, distinta da interpretação independente", "evidence_ids": ["E1"], "kind": "extracted"},
+    {"id": "C-INDEPENDENTE", "text": "PREENCHER: conclusão independente justificada, com ressalvas e sem aprovação de elegibilidade inexistente", "evidence_ids": ["E1"], "kind": "interpretation"},
+    {"id": "C-LIMITACOES", "text": "PREENCHER: limitações do artigo, do material disponível e da própria análise", "evidence_ids": ["E1"], "kind": "interpretation"}
+  ],
+  "sections": {
+    "executive_summary": ["C-RESUMO"],
+    "methods": ["C-METODOS"],
+    "intervention": ["C-INTERVENCAO"],
+    "results": ["C-RESULTADOS"],
+    "statistical_appraisal": ["C-ESTATISTICA"],
+    "methodological_appraisal": ["C-METODOLOGIA"],
+    "clinical_relevance": ["C-RELEVANCIA"],
+    "safety": ["C-SEGURANCA"],
+    "authors_conclusion": ["C-AUTORES"],
+    "independent_conclusion": ["C-INDEPENDENTE"],
+    "limitations": ["C-LIMITACOES"]
+  },
+  "assessment": {
+    "instrument": "PREENCHER: nome e variante do instrumento compatível com o desenho e objetivo",
+    "version": "PREENCHER: versão do formulário/modelo oficial vigente efetivamente consultado",
+    "status": "limited",
+    "coverage": {
+      "expected_ids": ["PREENCHER: identificador oficial; expandir para TODO o inventário aplicável do formulário/modelo oficial, sem adivinhar"],
+      "answered_ids": ["PREENCHER: identificador oficial; listar somente os IDs presentes em items"]
+    },
+    "items": [
+      {
+        "id": "PREENCHER: identificador do item no formulário/modelo oficial",
+        "domain": "PREENCHER: domínio oficial ao qual pertence o item",
+        "judgment": "PREENCHER: julgamento segundo as regras nativas do instrumento, ou limitação explicitada",
+        "reason": "PREENCHER: justificativa do julgamento baseada no trecho citado, sem inferir dados ausentes",
+        "evidence_ids": ["E1"]
+      }
+    ]
+  },
+  "human_review": {
+    "status": "pending",
+    "reviewer": "",
+    "notes": ""
+  }
+}

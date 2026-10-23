@@ -1,0 +1,61 @@
+name: Verify skill package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.10'
+          - os: ubuntu-latest
+            python: '3.13'
+          - os: windows-latest
+            python: '3.13'
+          - os: macos-latest
+            python: '3.13'
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Installer and release contract tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Scientific helper tests
+        run: python -m unittest discover -s skills/scientific-article-appraisal/scripts -p 'test_appraisal*.py' -v
+      - name: Install and exercise the actual installed helper
+        shell: python
+        run: |
+          import json, pathlib, subprocess, sys, tempfile
+          with tempfile.TemporaryDirectory() as tmp:
+              dest=pathlib.Path(tmp).resolve()/'installed'/'scientific-article-appraisal'
+              installer=[sys.executable,'scripts/install_skill.py','--target-dir',str(dest)]
+              subprocess.run(installer+['--dry-run'],check=True)
+              assert not dest.parent.exists()
+              subprocess.run(installer,check=True)
+              subprocess.run(installer+['--check'],check=True)
+              subprocess.run(installer,check=True)
+              helper=str(dest/'scripts/appraisal_report.py')
+              record='examples/synthetic/record.json'
+              subprocess.run([sys.executable,helper,'validate',record],check=True)
+              output=pathlib.Path(tmp)/'demo'
+              subprocess.run([sys.executable,helper,'render',record,'--output-prefix',str(output)],check=True)
+              for extension in ('.md','.html'):
+                  text=pathlib.Path(str(output)+extension).read_text(encoding='utf-8')
+                  assert 'Exemplo sintético' in text and 'Revisão humana: pendente' in text

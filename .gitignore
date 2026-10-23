@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.pdf
+*.docx
+*.xlsx
+.DS_Store
+outputs/

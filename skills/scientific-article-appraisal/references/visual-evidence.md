@@ -1,0 +1,30 @@
+# Evidência visual e ficha para apresentação
+
+## Objetivo editorial
+Conserve a análise crítica completa e já preenchida. Acrescente imagens quando elas tornarem verificáveis os resultados, métodos, incertezas ou críticas. A figura certa aproxima a fonte da interpretação; não substitui análise nem aumenta a confiabilidade do estudo por aparência.
+
+## Ficha visual no início
+- Abra cada análise com uma ficha de apresentação em PNG 16:9, preferencialmente 2400×1350 px, com recorte real do cabeçalho da primeira página do artigo. Preserve integralmente título e nomes dos autores; encerre o recorte em espaço em branco antes das afiliações/resumo, sem cortar linhas.
+- Use moldura limpa em azul/cinza e fundo claro. No rodapé, inclua referência verificável: autores (et al. se necessário), periódico, ano, volume/número/páginas ou identificador, DOI. Não invente logotipo, classificação de evidência ou selo institucional.
+- A ficha não deve conter número interno do artigo, selo “ARTIGO N” nem enunciado como “referência/base para apresentação”. Esses dados organizam arquivos, não identificam uma fonte científica em apresentação. Preserve apenas screenshot científico e rodapé bibliográfico, em composição limpa; mantenha números internos nos nomes/metadados quando necessários.
+- A ficha é uma composição editorial com screenshot original e rodapé bibliográfico; não a apresente como figura criada pelos autores. Guarde o screenshot/crop de origem e registre página, DPI, coordenadas e checksum.
+- Quando houver recursos e autorização, incorpore a ficha no topo do documento e entregue o PNG separado em destino restrito para reutilização em slides. Confira a imagem efetiva; não basta link que pode falhar ao carregar. Sem PDF/visão ou geração de imagem, declare análise parcial e ausência desse artefato, sem inventá-lo.
+
+## Seleção de figuras, quadros e tabelas
+- Selecione por valor informativo, não apenas por significância estatística: forest plot com IC cruzando zero, matriz de viés, perfil GRADE, fluxograma com discrepância ou tabela de efeito podem ser decisivos. Não inclua todos os gráficos por ritual; justifique cada seleção.
+- Reproduza do PDF original, sem redesenhar valores, cores, escalas, diamantes, sinais ou categorias. Diferencie Figura, Tabela e recorte de continuação; conserve o número nativo. Gráfico de uma tabela não deve ser apresentado como figura original.
+- Recorte somente margens ou contexto não pertinente. Preserve eixos, unidades, grupos, períodos, legenda, denominadores e notas necessárias. Não deixe linhas cortadas. Quando usar painel/trecho, identifique explicitamente o recorte e seus limites.
+- Na legenda editorial, registre artigo, número original, página PDF e, quando útil, página impressa. Acrescente comentário já respondido: o que olhar, como conversa com os resultados e qual limitação evidencia. Separe resultado dos autores e interpretação independente; matriz primária dos autores não é nossa aplicação ROBIS/AMSTAR 2.
+- Não altere erros aparentes da fonte. Mostre o original e explique a divergência; ausência de significância não é equivalência, gráfico favorável não comprova benefício clínico, e GRADE dos autores não é confiança metodológica da revisão.
+- Transcrições manuais de matrizes coloridas exigem conferência direta de cada linha/coluna, cabeçalho, legenda e símbolo na figura original. Invente zero células: não complete por padrão de outros estudos, não omita domínios e não troque alto risco/vermelho por incerto/amarelo. Registre a orientação da transposição quando reorganizar por estudo. O fato de uma citação existir literalmente numa transcrição escrita pela IA não prova fidelidade ao PDF; compare com o original antes de usá-la como suporte.
+- Imagens complementares não recuperadas não podem ser inventadas. Se não houver figura útil, diga isso e não use decoração como evidência.
+
+## Proveniência e geração
+- Mantenha manifesto de ativos com arquivo PDF e checksum, página, coordenadas do crop em pixels, DPI, arquivo PNG, dimensões, SHA-256 e seção de destino. O registro de cada visual inclui fonte/evidências existentes, legenda e análise; leitura visual continua necessária.
+- Use PNG em resolução adequada, sem distorcer proporções. PNG incorporado no HTML ou em DOCX gerado por recurso opcional do host mantém a entrega offline; links não são substitutos de imagens incorporadas.
+- Para documento remoto privado, use somente uma rota autenticada e documentada que o host realmente suporte. Não exponha PNGs por link público nem passe credenciais em URL para incorporar imagens. Se houver conversão DOCX com imagens incorporadas, teste em cópia restrita e confira tipo, identidade e conteúdo do alvo. Não presuma que uma rota de upload converta ou preserve um Google Doc em todas as contas. Importação integral pode substituir conteúdo e perder comentários/sugestões; não a use sobre documento anotado sem preservação verificável. Sem rota segura, entregue HTML autocontido e ativos locais, declarando a ausência de documento remoto final.
+
+## Atualização de documentos existentes
+- Leia versão atual, sugestões e comentários antes de mexer. Guarde backup nativo/local. Preserve nomes, IDs, links, texto, avaliações e observações humanas. Não reconstrua de um registro local desatualizado ignorando alterações do usuário.
+- Se a importação completa puder perder comentários/sugestões, não a execute sobre o original anotado: use operação que preserve âncoras, ou entregue uma versão ilustrada separada e informe o limite. Sem comentários/sugestões e com texto intacto, a conversão do export atual pode ser usada, verificando conteúdo integral depois.
+- Confira imagens incorporadas na estrutura nativa do documento (por exemplo `inlineObjects` em Google Docs quando disponível) e no PDF exportado real; valide legendas, quantidades, posição da ficha no topo, legibilidade, proporção e ausência de cortes. Releia conteúdo, comentários e permissões depois da escrita. Mantenha análises e ativos em destino restrito ao escopo autorizado até autorização explícita de divulgação.
