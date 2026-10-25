@@ -1,7 +1,7 @@
 # Síntese de uma página e arquitetura editorial
 
 ## Preserve as três camadas
-- **Página 1 — capa:** incorpore ficha visual limpa do cabeçalho original com referência no rodapé. Não inclua número interno, selos de organização, logotipo inventado nem enunciado de apresentação na imagem para slides. Mantenha numeração em nome de arquivo/metadados.
+- **Página 1 — capa:** incorpore ficha visual limpa do cabeçalho original com referência no rodapé; logo abaixo, apresente o [painel metodológico categórico](methodological-panel.md), respeitando a unidade e as categorias do instrumento. Não inclua número interno, selos de organização, logotipo inventado nem enunciado de apresentação na imagem para slides. Mantenha numeração em nome de arquivo/metadados.
 - **Página 2 — síntese:** componha síntese objetiva inteira em uma página para leitura rápida. Use em geral 300–450 palavras, tipografia legível e quebras reais. Não entregue apenas abstract traduzido nem substitua a análise integral pela síntese.
 - **Página 3 em diante — análise integral e anexos:** preserve resultados, julgamentos, incertezas, figuras/tabelas relevantes e notas humanas pertinentes, com fontes rastreáveis.
 
@@ -27,6 +27,6 @@ Uma análise anterior pode orientar concisão e hierarquia, não substituir a fo
 ## Confira no artefato efetivo
 - Exporte o documento real quando o host permitir e inspecione o PDF: capa na página 1, todos os blocos/rodapé da síntese na página 2 e corpo da página 3 em diante. Não declare uma página por contagem de palavras.
 - Use fonte em torno de 10,5–11 pt e espaçamento legível; se não couber, enxugue a redação, não elimine incertezas nem reduza até ficar ilegível.
-- Confira texto justificado, imagens incorporadas, proporções, notas e comentários. Guarde versão anterior e atualize no mesmo alvo somente quando autorizado e tecnicamente seguro.
+- Confira texto justificado, imagens incorporadas, proporções, notas e comentários; não deixe títulos isolados no rodapé. Não reduza a fonte nem elimine ressalvas para manter o total anterior de páginas após uma revisão de linguagem. Guarde versão anterior e atualize no mesmo alvo somente quando autorizado e tecnicamente seguro.
 - Confira também o PNG separado de capa se solicitado; mudar apenas a imagem no documento não atualiza esse arquivo.
 - Se PDF, visão, exportação ou autorização faltarem, entregue análise parcial/artefato disponível conforme `agent-capabilities.md`, com limite explícito. Não anuncie Doc final paginado ou publicação que não verificou.

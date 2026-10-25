@@ -23,8 +23,8 @@ class ReleaseContract(unittest.TestCase):
         description=re.search(r'(?m)^description:\s*(.+)$',front).group(1).strip('"\'')
         self.assertLessEqual(len(description),60)
         self.assertTrue(description.endswith('.'))
-        self.assertRegex(front,r'(?m)^\s*version:\s*["\']?0\.6\.0')
-        self.assertIn('0.6.0',(ROOT/'README.md').read_text(encoding='utf-8'))
+        self.assertRegex(front,r'(?m)^\s*version:\s*["\']?0\.7\.0')
+        self.assertIn('0.7.0',(ROOT/'README.md').read_text(encoding='utf-8'))
         self.assertRegex(front,r'(?m)^license: MIT$')
 
     def test_public_tree_has_no_private_artifacts_or_secret_patterns(self):

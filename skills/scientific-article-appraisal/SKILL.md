@@ -1,7 +1,7 @@
 ---
 name: scientific-article-appraisal
 description: "Use when critically appraising scientific articles."
-version: 0.6.0
+version: 0.7.0
 author: Cledson Santana, Boris
 license: MIT
 platforms: [linux, macos, windows]
@@ -28,10 +28,12 @@ Produza análise independente em português brasileiro por padrão; adapte o idi
 - **Escopo ≠ rigor metodológico ≠ certeza da evidência:** responda separadamente. Alto risco de viés não determina inelegibilidade sem regra protocolada. Evite o rótulo universal `artigo validado`.
 - **Extração ≠ interpretação:** separe fatos, conclusões dos autores e julgamento independente. Dê suporte localizável a afirmações importantes; identifique e justifique inferências.
 - **Leitura por clínicos:** preserve dados técnicos e acrescente significado em linguagem clara e consequência para a interpretação, conforme `references/clinician-readable-interpretation.md`.
+- **Contexto informado pelo usuário:** Não presuma instituição, serviço, população local ou linha de pesquisa. Avalie a aplicabilidade ao contexto-alvo fornecido; se ele não foi informado, descreva os limites da extrapolação sem inventá-lo. A autoria desta skill não define o contexto nem o autor das análises produzidas.
+- **Padrão editorial obrigatório:** faça uma revisão editorial integral da síntese, análise, leitura de figuras e justificativas dos anexos. Explique quem fez o quê, o que foi comparado e a consequência clínica, em português natural. Expandir siglas ou preservar números não basta; siga a passagem editorial e os critérios de conclusão de `references/clinician-readable-interpretation.md`.
 - **Limites reais:** use `não informado`, `não avaliável` ou `elegibilidade indeterminada` quando fundamentados. Não confunda ausência de relato com ausência de dano; não anuncie avaliação integral com fonte, PDF ou visão ausentes.
 
 ## Pré-requisitos e capacidades
-Leia `references/agent-capabilities.md`, `references/instrument-routing.md`, `references/appraisal-criteria.md`, `references/eligibility-and-workflow.md`, `references/visual-evidence.md`, `references/one-page-synthesis.md`, `references/clinician-readable-interpretation.md` e `templates/article-review.md`. Para diagnóstico/caracterização, leia também `references/diagnostic-review-robis.md`. Consulte o manual oficial da ferramenta escolhida na execução atual.
+Leia `references/agent-capabilities.md`, `references/instrument-routing.md`, `references/appraisal-criteria.md`, `references/eligibility-and-workflow.md`, `references/visual-evidence.md`, `references/one-page-synthesis.md`, `references/methodological-panel.md`, `references/clinician-readable-interpretation.md` e `templates/article-review.md`. Para ensaios randomizados, leia também `references/rct-source-and-result-audit.md`; para diagnóstico/caracterização, leia `references/diagnostic-review-robis.md`. Consulte o manual oficial da ferramenta escolhida na execução atual.
 
 Mapeie arquivos, shell/Python, web, PDF/visão e entrega aos recursos nativos realmente expostos pelo host. Não dependa de skills privadas, plugins ou contas específicas. O helper incluído usa Python 3.10+ e biblioteca padrão para JSON → Markdown/HTML local; não é leitor de PDF, avaliador clínico nem renderizador autônomo de documento Word/Google Docs em três camadas. Descubra exportação, layout e permissões antes de prometer documento final. Sem PDF/versão integral paginada equivalente ou visão, entregue análise parcial com limites. Não instale software pago, crie contas ou amplie acessos por padrão.
 
@@ -68,8 +70,9 @@ Trate `metadata.hermes` como extensões para esse host; não declare compatibili
 - **Conclua quando:** cobertura e julgamento nativos tiverem suporte por domínio e implicações concretas; caso contrário declare aplicação limitada.
 
 ### 5. Interprete e componha as três camadas
-- Organize o documento final conforme `templates/article-review.md` e `references/one-page-synthesis.md`: página 1 com capa/ficha visual limpa; página 2 com síntese inteira de uma página; página 3 em diante com análise integral e anexos. Preserve conteúdo e crítica completos sem comprimi-los na síntese. Use alinhamento justificado nos textos corridos, preservando legibilidade de títulos, tabelas e figuras.
+- Organize o documento final conforme `templates/article-review.md` e `references/one-page-synthesis.md`: página 1 com capa/ficha visual limpa e painel metodológico categórico; página 2 com síntese inteira de uma página; página 3 em diante com análise integral e anexos. Preserve conteúdo e crítica completos sem comprimi-los na síntese. Use alinhamento justificado nos textos corridos, preservando legibilidade de títulos, tabelas e figuras.
 - Quando fonte, direitos e recursos permitirem, incorpore ficha PNG 16:9 do cabeçalho original com referência no rodapé e entregue o PNG separado. Selecione imagens por valor informativo, não por p significativo; preserve eixos/notas e registre página, legenda e comentário analítico. Siga `references/visual-evidence.md`; não invente imagens indisponíveis.
+- Abaixo da ficha, apresente o painel de `references/methodological-panel.md`: faixa única para julgamento global nativo AMSTAR 2/ROBIS; pequenos quadrados coloridos em fundo branco por resultado/grupo do RoB 2. Sem classe global nativa, use cinza com explicação. Não converta instrumentos em nota 0–100, percentual de qualidade ou probabilidade de o resultado ser verdadeiro. Não altere retroativamente documentos não autorizados.
 - Junto a cada resultado/julgamento, entregue `dado técnico → leitura prática → consequência/limite clínico`, com siglas explicadas e leitura guiada de gráficos/tabelas.
 - Conclua o que o artigo sustenta, não sustenta e como contribui ao escopo. Diferencie relevância clínica, precisão, aplicabilidade à população/contexto-alvo, viabilidade e segurança. Sinalize extrapolações; não altere protocolo automaticamente.
 - Responda perguntas metodológicas com `problema → evidência → consequência`. Reserve ao revisor apenas decisões genuínas ou lacunas irrecuperáveis, não a implementação da análise.
@@ -81,6 +84,7 @@ Trate `metadata.hermes` como extensões para esse host; não declare compatibili
 - Preencha `templates/appraisal-record.json`; leia `references/structured-record.md` e `references/visuals-contract.md`. O helper verifica literalidade no arquivo local declarado e integridade PNG mínima/SHA-256, não precisão de página, autenticidade, crop ou suporte científico. Confira independentemente trechos no original e página/localizador. Justifique buscas de informação ausente, sem criar citação falsa.
 - Leia a saída e confira cobertura, elegibilidade, domínios e consistência numérica. Para DOCX/Google Docs/PDF, verifique conteúdo, imagens incorporadas, texto justificado e páginas no arquivo exportado real. O helper não garante essas propriedades.
 - Entregue no formato/destino solicitado e autorizado, sem preferência por integração privada. Se faltarem exportação ou permissão, entregue os arquivos locais efetivos e declare o limite. Preserve nomes/IDs/links existentes e mantenha números internos fora da capa para apresentação.
+- Na revisão de documento existente, cubra todos os parágrafos editáveis e registre os mantidos/protegidos. Confira valores e fontes, depois audite o sentido de todos os pares alterados. Encerre bloqueios com correções mínimas documentadas; vincule a aprovação à versão exata aplicada. Preserve literalmente fontes e campos oficiais, julgamentos, painéis e intervenções humanas.
 - Antes de atualizar, salve versão anterior e leia comentários/sugestões. Após escrita externa, releia o alvo exato e seus acessos; não declare publicação por sucesso da chamada apenas.
 - **Conclua quando:** artefatos, verificações efetivas, limites e estado de revisão estiverem explícitos e a entrega corresponder ao alcance autorizado.
 

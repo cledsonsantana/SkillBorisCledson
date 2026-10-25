@@ -1,16 +1,21 @@
 # Análise crítica — [título científico]
 
-**Organização física da entrega:** página 1 = capa com ficha visual limpa, sem número interno ou enunciado de apresentação; página 2 = síntese objetiva de uma página (objetivo, metodologia, intervenção/testes e desfechos, resultados, leitura crítica, conclusão/segurança); página 3 em diante = análise integral e anexos. Confira a paginação no PDF exportado do documento real pelo host. Use texto corrido justificado. Sem exportação/layout verificados, entregue o artefato efetivo com limite explícito; MD/HTML do helper não comprovam este formato final.
+**Organização física da entrega:** página 1 = capa com ficha visual limpa e painel metodológico categórico logo abaixo, sem número interno ou enunciado de apresentação; página 2 = síntese objetiva de uma página (objetivo, metodologia, intervenção/testes e desfechos, resultados, leitura crítica, conclusão/segurança); página 3 em diante = análise integral e anexos. Confira a paginação no PDF exportado do documento real pelo host. Use texto corrido justificado. Sem exportação/layout verificados, entregue o artefato efetivo com limite explícito; MD/HTML do helper não comprovam este formato final.
+
+**Padrão de redação:** na síntese, análise, leitura de figuras e justificativas dos anexos, apresentar dado técnico → significado → consequência clínica. Nomear procedimentos, comparações e lacunas em linguagem natural, sem calques ou ressalvas sem referente. Aplicar a revisão integral de `references/clinician-readable-interpretation.md`; preservar fontes, campos nativos, julgamentos e intervenções humanas. Esta orientação é interna ao modelo, não aviso para ocupar a capa.
 
 > Modelo interno: substituir todos os campos antes da entrega real. A saída final é uma análise preenchida, não este formulário. Ausências reais são redigidas como não informado/não avaliável, com motivo. Não usar este aviso na entrega.
 
 **Ficha visual de abertura:** [PNG 16:9 incorporado com screenshot do cabeçalho original e referência completa no rodapé; PNG separado entregue para slides. Registro da origem/página/crop preservado.]
+
+**Painel metodológico na página 1:** [instrumento e objeto; faixa única para classe global nativa AMSTAR 2/ROBIS, ou quadrado pequeno colorido à esquerda de rótulo neutro por resultado/grupo do RoB 2, em fundo branco e com explicação abaixo; cinza sem classe global nativa. Sem nota/percentual. Ver `references/methodological-panel.md`.]
 
 **Referência completa e DOI/link:** [identificação]
 **Desenho e pergunta:** [classificação fundamentada]
 **Material analisado:** [PDF completo, suplementos, registro, protocolo; limites e versão]
 **Capacidades e artefato efetivo:** [texto/PDF/visão disponíveis; MD/HTML, DOCX ou documento remoto realmente produzido; exportação/layout verificados ou limites explícitos]
 **Escopo aplicado:** [versão e critérios da pesquisa]
+**População e contexto-alvo informado:** [fornecido por quem solicita; se ausente, declarar não informado, sem presumir instituição ou população local]
 **Análise elaborada por:** [identidade factual do agente de IA; modelo/versão somente se conhecidos]. **Revisão humana:** [pendente ou revisor/confirmada]. Não atribua a análise ao autor da skill ou a uma instituição.
 
 ## Resumo executivo e parecer

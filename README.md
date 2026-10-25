@@ -21,7 +21,7 @@ A análise separa **dados dos autores, conclusão dos autores e interpretação 
 
 ## Resultado pretendido
 
-1. Capa limpa com referência, reaproveitável em slides quando os direitos permitirem.
+1. Capa limpa com referência e painel metodológico categórico, respeitando o instrumento; ficha separada reaproveitável em slides quando os direitos permitirem.
 2. Síntese objetiva de uma página para apoiar a seleção e a apresentação.
 3. Análise integral: métodos, resultados, interpretação estatística/clínica, instrumentos, figuras/tabelas originais pertinentes e anexos com fontes localizáveis.
 
@@ -40,11 +40,15 @@ O helper **não lê o PDF sozinho, não aplica instrumentos automaticamente e n�
 
 Python 3.10+ e biblioteca padrão para os scripts: sem `pip`, token ou conta deste projeto. O agente/LLM e eventuais conectores são fornecidos pelo usuário. Há destinos de instalação para Hermes, Codex e Claude Code e um destino explícito para outros hosts. A documentação não promete execução nativa em todo agente ou sistema operacional.
 
-Português é o idioma editorial inicial; o agente adapta idioma, especialidade, escopo e entrega conforme o pedido. [Preferências de exemplo](examples/adaptation.example.json) são orientação para o agente, não configuração automática.
+Português é o idioma editorial inicial; o agente adapta idioma, especialidade, escopo e entrega conforme o pedido. Não há instituição, serviço ou população local predefinidos: o contexto-alvo é informado por quem solicita a análise. [Preferências de exemplo](examples/adaptation.example.json) são orientação para o agente, não configuração automática.
+
+## Atualização editorial
+
+A versão 0.7.0 torna obrigatória a revisão clínica integral, acrescenta painéis nativos por instrumento e reforça a auditoria de fontes/resultados de ensaios randomizados. Preserva a identidade real do agente, os comentários e as decisões humanas. Veja o [histórico de mudanças](CHANGELOG.md). O helper e o instalador continuam com o mesmo alcance técnico; não foi acrescentado um avaliador científico automático.
 
 ## Estado e autoria
 
-**Versão pública inicial 0.6.0 — experimental.** Testes de código não são validação científica. A apresentação deriva de uma calibração editorial limitada; não anuncia validação geral em todos os desenhos ou equivalência a revisores humanos independentes.
+**Versão pública 0.7.0 — experimental.** Testes de código não são validação científica. A apresentação deriva de uma calibração editorial limitada; não anuncia validação geral em todos os desenhos ou equivalência a revisores humanos independentes.
 
 Criado por **Cledson Santana**, com **Boris (agente de IA)** como colaborador. Sem endosso institucional ou dos criadores dos instrumentos.
 

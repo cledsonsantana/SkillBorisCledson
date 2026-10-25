@@ -15,6 +15,10 @@ Este é o repertório de roteamento da skill, não uma biblioteca de formulário
 
 Para revisão de métodos, predição, prognóstico, diretriz clínica, economia ou outro objetivo específico, o agente verifica o encaixe e procura ferramenta própria. Uma adaptação inspirada em domínios deve ser identificada como não validada, sem fingir aplicação nativa integral.
 
+## Como apresentar os julgamentos
+
+Use a categoria nativa e a unidade avaliada. Para AMSTAR 2/ROBIS, faixa única quando houver julgamento global da revisão. Para RoB 2, pequenos quadrados por resultado/grupo com julgamento idêntico, em fundo branco, rótulos neutros e explicação. Sem classe global nativa, use cinza com essa limitação explícita, não qualidade mediana. Não converta ferramentas em nota 0–100, média de domínios ou probabilidade de resultado verdadeiro. [Regras editoriais](../skills/scientific-article-appraisal/references/methodological-panel.md).
+
 ## Certeza da evidência
 
 **GRADE:** confiança numa estimativa de um corpo de evidência por pergunta/comparação/desfecho; não uma nota geral de um artigo. Examinar risco de viés, inconsistência, evidência indireta, imprecisão e viés de publicação segundo a rota apropriada. Não atribuir graus formais por suposição ou simplesmente copiar a conclusão dos autores. [Cochrane](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14) · [GRADE Working Group](https://www.gradeworkinggroup.org/).
